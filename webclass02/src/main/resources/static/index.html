@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <h1>회원 가입</h1>
+    <div>
+       username <input type="text" name="username"><br>
+       email <input type="text" name="email"><br>
+       password <input type="text" name="password"><br>
+       <input type="button" name="확인" value="확인">
+       <input type="button" name="취소" value="취소">
+    </div>
+    
+    <h1>댓글</h1>
+    <div>
+        content <input type="text" name="content">
+        <input type="button" name="확인" value="확인">
+    </div>
+    
+    <h1>회원 목록</h1>
+    <div>
+        aaa&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;aaa@dgsw
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;1234
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;person.png
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;C:/SBEX/webclass02/upload/2020/05/23/&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        
+        <input type="button" name="수정" value="수정">
+        <input type="button" name="삭제" value="삭제">
+        <input type="button" name="이미지" value="이미지">     
+    </div>
+    
+    <hr>
+    
+    <h1>댓글 목록</h1>
+    <div>
+      aaa&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;hi there 1
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="button" name="수정" value="수정">
+        <input type="button" name="삭제" value="삭제">
+        
+        <hr>
+        
+              aaa&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;hi there 1
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="button" name="수정" value="수정">
+        <input type="button" name="삭제" value="삭제">  
+        
+           <hr>
+           
+                    aaa&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;hi there 1
+      &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <input type="button" name="수정" value="수정">
+        <input type="button" name="삭제" value="삭제">  
+        
+           <hr>   
+    </div>
+    
+    <input type="button" value="로그인" style="margin-top: 10px;" onclick="loginAfter();" />
+  <div id="loginBox" style="display: none !important; width: 300px; height: 200px; display: flex; justify-content: space-evenly; align-items: center; flex-direction: column; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white;">
+    <h4>로그인</h4>
+    <input id="signInEmail" type="email" placeholder="사용자 이메일" />
+    <input id="signInPassword" type="password" placeholder="패스워드" />
+    <div>
+      <input type="button" value="확인" onclick="login();" />
+      <input type="button" value="취소" onclick="loginBefore();" />
+    </div>
+  </div>
+</body>
+</html>
