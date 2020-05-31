@@ -18,12 +18,14 @@ import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import kr.hs.dgsw.webclass02.Domain.Comment;
-import kr.hs.dgsw.webclass02.Domain.User;
+import kr.hs.dgsw.webclass02.Domain.User; 
 import kr.hs.dgsw.webclass02.Protocol.AttachmentProtocol;
 import kr.hs.dgsw.webclass02.Repository.CommentRepository;
 import kr.hs.dgsw.webclass02.Repository.UserRepository;
@@ -36,12 +38,12 @@ public class AttachmentController {
     @Autowired
     CommentRepository commentRepository;
 
-    @PostMapping("/attachment")
-    public AttachmentProtocol upload(@RequestPart MultipartFile srcFile) {
+    // @PostMapping("/attachment")
+    @RequestMapping(value="/attachment", method = RequestMethod.POST)
+    public AttachmentProtocol upload(@RequestPart("image") MultipartFile srcFile) {
         String destFilename = "C:/webclass02/upload/"
                 + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd/"))
                 + UUID.randomUUID().toString() + "_" + srcFile.getOriginalFilename();
-
         try {
             File destFile = new File(destFilename);
             destFile.getParentFile().mkdirs();
